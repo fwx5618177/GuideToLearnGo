@@ -20,6 +20,9 @@
 6. 方法
 7. 接口
 8. CSP的并发-goroutines/channels
+    - go
+    - defer
+    - channels/chan
 9. 共享变量的并发编程
 10. 包和包的组织结构
 11. 单元测试
