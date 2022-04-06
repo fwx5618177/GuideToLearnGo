@@ -3,6 +3,9 @@
 # Go 语言编程
 - 单元测试
 - 并发
+    - goroutine
+    - channel
+    - Mutex
 - 游戏服务器编程
 - 网络编程
     - RPC
