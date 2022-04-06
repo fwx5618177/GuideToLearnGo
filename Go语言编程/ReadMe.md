@@ -1,6 +1,19 @@
+[TOC]
 
 # Go 语言编程
-
+- 单元测试
+- 并发
+- 游戏服务器编程
+- 网络编程
+    - RPC
+    - Socket:TCP/UDP/ICMP
+    - HTTP
+    - JSON
+- 加解密
+    - 文件服务器
+- 反射
+- CGO
+    
 
 ## 目录结构
 ```shell
@@ -294,5 +307,29 @@ func (v Vector) DoAll(u Vector) {
 # 出让时间片
 - runtime包中的`Gosched()`：控制何时主动出让时间片给其他的goroutine
 
-# Socket编程
-- 
+# RPC编程
+- 一种通过网络从远程计算机程序上请求服
+务，而不需要了解底层网络细节的应用程序通信协议
+- 构建在TCP/UDP/HTTP上，开发者无需额外地为这个调用过程编写网络通信相关代码，使得开发包括网络分布式程序在内的应用程序更加容易
+- `net/rpc`
+
+# Gotool
+- 文件内容格式化： go fmt [file]
+- 获取远程包： go get [url]
+- 文件格式:
+ - 一个标准的Go语言工程包含以下几个目录：src、pkg和bin
+- 自动生成文档: go doc [file]
+- 工程构建会在当前所在目录生成可执行文件：`go build [file]`
+- 安装到恰当的位置: `go install [file]`
+- 环境变量: `export GOPATH=~/work/go-proj1:~/work2/goproj2:~/work3/work4/go-proj3`
+
+# 跨平台开发
+## 交叉编译
+- 交叉编译是在一个平台上生成另一个平台上的可执行代码。 同一个体系结构可以运行不同的操作系统；同样，同一个操作系统也可以在不同的体系结构上运行。
+- 如果你当前的编译目标为AMD64架构的64位Linux，那么Go包对应的安装位置是linux_amd64。推导之，如果当前的编译目标为x86架构的32位Windows，对应的安装位置就是windows_386
+- 如果我们要在一台安装了64位Linux操作系统的AMD64电脑上执行一段Go代码，就必须用能够生成64位ELF文件格式的Go编译器进行编译和链接
+
+- win: `GOOS=windows GOARCH=386 go build -o upload.exe upload.go`
+- android: `GOOS=linux GOARCH=ARM `
+
+
