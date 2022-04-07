@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgresql:
+    image: postgresql:base
+    container_name: postgresql_base
+    build:
+      context: './postgreql'
+      dockerfile: 'dockerfile'
+    ports:
+      - "5432:5432"
+    privileged: true
+    tty: true
+    cap_add:
+      - ALL
+    volumes:
+      - '$PWD/postgreql/conf:/mysql'

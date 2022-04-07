@@ -23,7 +23,7 @@
 - channels
 
 # 并发模式
-- runner: 监控程序的执行时间
+- runner: 监控程序的执行时间，通过通道来监视程序的执行时间
 - pool: 有缓冲的通道资源池
 - work: 无缓冲通道创建goroutine池
 

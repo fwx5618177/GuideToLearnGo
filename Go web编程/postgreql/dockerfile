@@ -1,0 +1,9 @@
+FROM postgres
+
+#初始化PostgreSQL
+ENV POSTGRES_USER root
+ENV POSTGRES_PASSWORD root
+ENV POSTGRES_DB noah
+
+#容器运行时监听的端口
+EXPOSE 5432
