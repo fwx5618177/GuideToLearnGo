@@ -1,3 +1,16 @@
+# Go招聘技术要求
+- 分布式系统设计
+    - 分布式存储
+    - 分布式计算
+- 熟悉常见Go框架
+- 熟悉SQL
+- 基本算法
+- 消息队列
+- k8s
+- 微服务
+- grpc
+- net/http
+
 # 读书笔记
 - [x] Go语言圣经: 基础
 - [x] Go语言编程: 基础和网络应用(rpc, http)
@@ -10,6 +23,8 @@
 - [ ] Go: Building Web Applications
 - [ ] Writing An interpreter in Go
 - [ ] Go设计模式
+- [ ] Go2编程指南
+- [ ] Go语言标准库
 
 # 进阶
 《go专家编程》
