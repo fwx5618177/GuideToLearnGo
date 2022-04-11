@@ -1,5 +1,14 @@
 [TOC]
 
+# 难点
+- 并发
+- CGO
+- Go汇编
+- RPC
+- Protobuf
+    - grpc
+    - pbgo
+
 # Go语言高级编程
 - 目前阅读: [Go语言高级编程](https://books.studygolang.com/advanced-go-programming-book/)
 
@@ -129,4 +138,52 @@ func main() {
 ```
 
 
+
+
+# 汇编
+- Go汇编不是独立的语言
+- 查看go对应的伪汇编代码: `go tool compile -S 【file】`
+    - S:输出汇编格式
+- [go 汇编入门指南](https://go.dev/doc/asm)
+- 如果是纯粹学习汇编语言，则可以从《深入理解程序设计：使用Linux汇编语言》开始，该书讲述了如何以C语言的思维变现汇编程序。如果是学习X86汇编，则可以从《汇编语言：基于x86处理器》一开始，然后再结合《现代x86汇编语言程序设计》学习AVX等高级汇编指令的使用。
+
+Go汇编语言的官方文档非常匮乏。其中“A Quick Guide to Go's Assembler”是唯一的一篇系统讲述Go汇编语言的官方文章，该文章中又引入了另外两篇Plan9的文档：A Manual for the Plan 9 assembler 和 Plan 9 C Compilers。Plan9的两篇文档分别讲述了汇编语言以及和汇编有关联的C语言编译器的细节。看过这几篇文档之后会对Go汇编语言有了一些模糊的概念，剩下的就是在实战中通过代码学习了。
+
+
+# RPC
+- 基于`net/rpc`的扩展
+- 规范设计
+    - client - 规范 - server
+- 封装内部方法
+- 跨语言
+
+
+# go web
+- 框架：
+    - router：httpRouter
+    - MVC：beego，goa，chi
+
+# 分布式系统
+## 分布式id生成器
+- snowflake
+- sonyflake
+## 分布式锁
+- trylock: goroutine在抢锁失败后，需要放弃其流程
+- setnx:基于Redis,抢占逻辑,很适合在高并发场景下，用来争抢一些“唯一”的资源
+- zookeeper: Lock成功之前会一直阻塞,分布式的阻塞锁比较适合分布式任务调度场景，但不适合高频次持锁时间短的抢锁场景
+- etcd
+
+## 延时任务系统
+- 定时器
+    - 时间堆：小顶堆，特殊二叉树
+    - 时间轮：哈希表
+- 定时任务触发：
+    - 将任务被触发的信息封装为一条消息，发往消息队列，由用户侧对消息队列进行监听。
+    - 对用户预先配置的回调函数进行调用。
+## 分布式搜索引擎
+- elasticsearch
+
+## 负载均衡
+- 洗牌算法
+- 修正洗牌算法(fisher-yates)
 

@@ -1,5 +1,11 @@
 # 读书笔记
-- Go语言圣经: 基础
-- Go语言编程: 基础和网络应用(rpc, http)
-- Go语言实战: 提升、数据库连接池pool
-- Go web编程: web、docker化
+- [x] Go语言圣经: 基础
+- [x] Go语言编程: 基础和网络应用(rpc, http)
+- [x] Go语言实战: 提升、数据库连接池pool
+- [x] Go web编程: web、docker化
+- [x] Go高级编程:CGO、Go汇编、RPC、分布式
+- [ ] Go并发编程实战
+- [ ] [Go 云存储](https://www.qiyacloud.cn/)
+- [ ] Go: Building Web Applications
+- [ ] Writing An interpreter in Go
+- [ ] Go设计模式
