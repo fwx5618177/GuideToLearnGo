@@ -10,6 +10,37 @@
 - 微服务
 - grpc
 - net/http
+- 云存储
+- 标准库
+
+# 基础技术栈要求
+- channel
+- goroutine
+- 并发
+	- 连接池
+		- runner
+		- pool
+		- work
+	- Mutex
+- 单元测试
+- 网络编程
+- 游戏服务器编程
+- RPC
+- Socket： TCP/UDP/ICMP
+- HTTP
+- 加解密
+- 文件服务器
+- JSON
+- 反射
+- CGO
+- Go汇编
+- 多路复用
+- 数据库链接
+- SOAP/REST
+- docker化
+- 云存储
+- 微服务
+
 
 # 读书笔记
 - [x] Go语言圣经: 基础
@@ -30,7 +61,7 @@
 《go专家编程》
 《go语言并发之道》
 《go并发编程实战》
-《Go语言高并发与微服务实战》
+- [ ] 《Go语言高并发与微服务实战》
 
 # 深入
 《深入解析Go》 底层研究
