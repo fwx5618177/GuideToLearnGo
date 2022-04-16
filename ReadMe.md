@@ -48,21 +48,25 @@
 - [x] Go语言实战: 提升、数据库连接池pool
 - [x] Go web编程: web、docker化
 - [x] Go高级编程:CGO、Go汇编、RPC、分布式
-- [ ] [Go语言精进之路](https://golang.coding3min.com/books-share/)
-- [ ] Go并发编程实战
+- [x] GoRPC开发指南
+- [x] [Go语言精进之路](https://golang.coding3min.com/books-share/)
+- [x] Go并发编程实战
 - [ ] [Go 云存储](https://www.qiyacloud.cn/)
 - [ ] Go: Building Web Applications
 - [ ] Writing An interpreter in Go
 - [ ] Go设计模式
 - [ ] Go2编程指南
-- [ ] Go语言标准库
+- [x] Go语言标准库
 
 # 进阶
-《go专家编程》
+- [x] go专家编程
 《go语言并发之道》
 《go并发编程实战》
-- [ ] 《Go语言高并发与微服务实战》
+- [x] 《Go语言高并发与微服务实战》: 基础，并发，gRPC，微服务，系统设计，网关
 
 # 深入
 《深入解析Go》 底层研究
 《极客时间go语言36讲》
+
+# 面经
+- [ ] [面经](https://leetcode.coding3min.com/readme/)
