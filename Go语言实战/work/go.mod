@@ -1,3 +1,3 @@
-module work
+module main
 
 go 1.18
